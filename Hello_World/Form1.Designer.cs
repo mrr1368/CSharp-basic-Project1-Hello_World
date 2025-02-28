@@ -32,7 +32,7 @@
             txtFullName = new TextBox();
             lblFullName = new Label();
             btnSubmit = new Button();
-            label1 = new Label();
+            lblMesssage = new Label();
             SuspendLayout();
             // 
             // txtFullName
@@ -60,14 +60,15 @@
             btnSubmit.TabIndex = 2;
             btnSubmit.Text = "ثبت";
             btnSubmit.UseVisualStyleBackColor = true;
+            btnSubmit.Click += btnSubmit_Click;
             // 
-            // label1
+            // lblMesssage
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(204, 70);
-            label1.Name = "label1";
-            label1.Size = new Size(0, 18);
-            label1.TabIndex = 3;
+            lblMesssage.AutoSize = true;
+            lblMesssage.Location = new Point(204, 70);
+            lblMesssage.Name = "lblMesssage";
+            lblMesssage.Size = new Size(0, 18);
+            lblMesssage.TabIndex = 3;
             // 
             // Form1
             // 
@@ -75,7 +76,7 @@
             AutoScaleDimensions = new SizeF(8F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(474, 121);
-            Controls.Add(label1);
+            Controls.Add(lblMesssage);
             Controls.Add(btnSubmit);
             Controls.Add(lblFullName);
             Controls.Add(txtFullName);
@@ -83,11 +84,13 @@
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
             KeyPreview = true;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Form1";
             RightToLeft = RightToLeft.Yes;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Hello World";
-            Load += Form1_Load;
+            KeyDown += Form1_KeyDown;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -97,6 +100,6 @@
         private TextBox txtFullName;
         private Label lblFullName;
         private Button btnSubmit;
-        private Label label1;
+        private Label lblMesssage;
     }
 }
